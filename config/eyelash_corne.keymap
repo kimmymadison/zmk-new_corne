@@ -53,6 +53,13 @@
             #binding-cells = <0>;
             bindings = <&sl 1>, <&shiftlayer>;
         };
+
+        quote_td: quote_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QUOTE_TD";
+            #binding-cells = <0>;
+            bindings = <&kp APOS>, <&kp LS(APOS)>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -73,21 +80,24 @@
         alt_f4: alt_f4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &alt_f4>;
+            bindings = <&kp LEFT_ALT &alt_f4>, <&macro_tap>;
+
             label = "ALT_F4";
         };
 
         ctrl_alt_delete: ctrl_alt_delete {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp LEFT_ALT &kp DEL>;
+            bindings = <&kp LEFT_CONTROL &kp LEFT_ALT &kp DEL>, <&macro_tap>;
+
             label = "CTRL_ALT_DELETE";
         };
 
         shiftlayer: shiftlayer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 1 &kp LEFT_SHIFT>;
+            bindings = <&sl 1 &sk LEFT_SHIFT>, <&macro_tap>;
+
             label = "SHIFTLAYER";
         };
     };
@@ -98,13 +108,13 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&gresc                &kp Q  &kp W  &kp E             &kp R           &kp T                                   &kp UP                &kp Y        &kp U      &kp I       &kp O    &kp P     &kp BSPC
-&shiftcaps_sticky_td  &kp A  &kp S  &kp D             &kp F           &lt 2 G                       &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K       &kp L    &kp SEMI  &kp SQT
-&kp TAB               &kp Z  &kp X  &kp C             &kp V           &kp B         &kp LEFT_GUI              &kp DOWN              &kp N        &kp M      &kp COMMA   &kp DOT  &kp FSLH  &shiftcaps_sticky_td
-                                    &sk LEFT_CONTROL  &shiftlayer_td  &sk LEFT_ALT                                                  &lt 1 ENTER  &kp SPACE  &kp DELETE
+&gresc            &kp Q  &kp W  &kp E         &kp R                 &kp T                                     &kp UP                &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB           &kp A  &kp S  &kp D         &kp F                 &lt 2 G                         &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp RET
+&sk LEFT_CONTROL  &kp Z  &kp X  &kp C         &kp V                 &kp B           &kp LEFT_GUI              &kp DOWN              &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp DELETE
+                                &sk LEFT_ALT  &shiftcaps_sticky_td  &shiftlayer_td                                                  &sl 1  &kp SPACE  &quote_td
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
+            sensor-bindings = <&inc_dec_kp LC(K_SCROLL_UP) LC(K_SCROLL_DOWN)>;
         };
 
         lower_layer {
@@ -116,7 +126,7 @@
                               &trans                &trans                 &trans                                                        &trans  &kp N0        &kp PERIOD
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         raise_layer {
