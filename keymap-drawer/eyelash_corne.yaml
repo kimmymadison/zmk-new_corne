@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - '&shiftcaps_sticky_td'
+  - $$mdi:keyboard-tab$$
   - A
   - S
   - D
@@ -27,8 +27,8 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
-  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
   - Z
   - X
   - C
@@ -41,13 +41,13 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - '&shiftcaps_sticky_td'
-  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
-  - '&shiftlayer_td'
-  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '$$mdi:keyboard-return$$', h: NUMBER}
-  - $$mdi:keyboard-space$$
   - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - '&shiftcaps_sticky_td'
+  - '&shiftlayer_td'
+  - {t: NUMBER, h: '$$mdi:gesture-tap-hold$$'}
+  - $$mdi:keyboard-space$$
+  - '&quote_td'
   NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
