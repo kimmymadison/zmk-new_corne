@@ -14,7 +14,7 @@ layers:
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
   - '&shiftcaps_sticky_td'
-  - A
+  - B
   - S
   - D
   - F
