@@ -33,7 +33,7 @@ layers:
   - X
   - C
   - V
-  - B
+  - {t: B, h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:arrow-down-bold$$
   - N
@@ -42,7 +42,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: SYMBOL, h: '$$mdi:gesture-tap-hold$$'}
   - '&shiftcaps_sticky_td'
   - '&shiftlayer_td'
   - {t: NUMBER, h: '$$mdi:gesture-tap-hold$$'}
@@ -140,7 +140,7 @@ layers:
   - BT CLR ALL
   - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-right-click-outline$$
