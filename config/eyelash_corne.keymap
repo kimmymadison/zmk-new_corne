@@ -82,10 +82,13 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&sk LEFT_SHIFT &sl 1>,
-                <&macro_pause_for_release>,
+                <&sk LEFT_SHIFT>,
                 <&macro_release>,
-                <&sk LEFT_SHIFT &sl 1>;
+                <&sk LEFT_SHIFT>,
+                <&macro_press>,
+                <&sl 1>,
+                <&macro_release>,
+                <&sl 1>;
 
             label = "SHIFTLAYER";
         };
