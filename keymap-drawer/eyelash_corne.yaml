@@ -27,7 +27,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - '&quote_td'
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
   - Z
   - X
@@ -43,11 +43,11 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:backspace-reverse-outline$$
   - {t: SYMBOL, h: '$$mdi:gesture-tap-hold$$'}
-  - '&shiftcaps_sticky_td'
   - '&shiftlayer_td'
-  - {t: NUMBER, h: '$$mdi:gesture-tap-hold$$'}
+  - '&shiftcaps_sticky_td'
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - '&quote_td'
+  - {t: NUMBER, h: '$$mdi:gesture-tap-hold$$'}
   NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -94,9 +94,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {t: '0', s: )}
   - .
+  - {t: '0', s: )}
+  - {type: held}
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
   - F9
