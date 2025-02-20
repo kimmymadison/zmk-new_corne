@@ -100,10 +100,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&gresc                &kp Q  &kp W  &kp E             &kp R  &kp T                                 &kp UP                &kp Y  &kp U      &kp I       &kp O    &kp P     &kp BSPC
-&kp TAB               &kp A  &kp S  &kp D             &kp F  &lt 2 G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J      &kp K       &kp L    &kp SEMI  &kp ENTER
-&shiftcaps_sticky_td  &kp Z  &kp X  &kp C             &kp V  &mt LALT B  &kp LEFT_GUI              &kp DOWN              &kp N  &kp M      &kp COMMA   &kp DOT  &kp FSLH  &quote_td
-                                    &sk LEFT_CONTROL  &sl 1  &sl 3                                                       &sl 1  &kp SPACE  &kp DELETE
+&gresc                &kp Q  &kp W  &kp E             &kp R  &kp T                                 &kp UP                &kp Y          &kp U      &kp I            &kp O    &kp P     &kp BSPC
+&kp TAB               &kp A  &kp S  &kp D             &kp F  &lt 2 G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H          &kp J      &kp K            &kp L    &kp SEMI  &kp ENTER
+&shiftcaps_sticky_td  &kp Z  &kp X  &kp C             &kp V  &mt LALT B  &kp LEFT_GUI              &kp DOWN              &kp N          &kp M      &kp COMMA        &kp DOT  &kp FSLH  &quote_td
+                                    &sk LEFT_CONTROL  &sl 1  &sl 3                                                       &kp BACKSPACE  &kp SPACE  &sk RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp LC(C_VOL_UP) C_VOL_DN>;
@@ -112,10 +112,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &trans     &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans                      &kp PG_UP               &trans  &kp N7        &kp N8        &kp N9        &trans  &kp BSPC
-&trans  &kp MINUS  &kp EQUAL  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans            &kp HOME  &trans         &kp END  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &kp DEL
-&trans  &kp UNDER  &kp PLUS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans              &kp PAGE_DOWN           &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                              &trans                &trans                 &trans                                              &trans  &kp N0        &kp PERIOD
+&kp GRAVE     &kp LS(N1)    &kp LS(N2)  &kp LS(N3)     &kp LS(N4)  &kp LS(N5)                      &kp PG_UP               &kp LS(N6)  &kp LS(N7)  &kp LS(N8)     &kp LS(N9)  &kp LS(N0)     &kp BSPC
+&kp LS(LBKT)  &kp NUMBER_1  &kp N2      &kp N3         &kp N4      &kp N5                &kp HOME  &trans         &kp END  &kp N6      &kp N7      &kp N8         &kp N9      &kp N0         &kp LS(RBKT)
+&kp LBKT      &kp LS(BSLH)  &none       &kp LS(EQUAL)  &kp EQUAL   &trans      &trans              &kp PAGE_DOWN           &trans      &kp MINUS   &kp LS(MINUS)  &kp DOT     &kp BACKSLASH  &kp RBKT
+                                        &trans         &trans      &trans                                                  &trans      &kp N0      &kp PERIOD
             >;
         };
 
