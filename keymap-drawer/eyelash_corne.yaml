@@ -1,6 +1,6 @@
 layers:
   QWERTY:
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:apple-keyboard-option$$
+  - $$mdi:keyboard-tab$$
   - A
   - S
   - D
@@ -28,7 +28,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - .
-  - '&shiftcaps_sticky_td'
+  - $$mdi:apple-keyboard-option$$
   - Z
   - X
   - C
@@ -43,11 +43,11 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - '&shiftcaps_sticky_td'
   - {t: SYMBOL, h: '$$mdi:gesture-tap-hold$$'}
   - {t: NUMBER, h: '$$mdi:gesture-tap-hold$$'}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: Sft+1, s: Sft+!}
@@ -76,24 +76,24 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - {t: '=', s: +}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '`', s: '~'}
   - '~'
-  - {t: '-', s: _}
+  - +
   - {t: '[', s: '{'}
-  - {t: 'Sft+[', s: 'Sft+{'}
-  - {t: Sft+=, s: Sft++}
+  - '{'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - PgDn
-  - {t: Sft+\, s: Sft+|}
-  - {t: 'Sft+]', s: 'Sft+}'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '}'
   - {t: ']', s: '}'}
-  - {t: Sft+-, s: Sft+_}
+  - '|'
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '-', s: _}
+  - _
+  - {t: '=', s: +}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
