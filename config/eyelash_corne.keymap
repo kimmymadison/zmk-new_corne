@@ -4,8 +4,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 /*
@@ -59,6 +57,13 @@
             #binding-cells = <0>;
             bindings = <&kp APOS>, <&kp LS(APOS)>;
         };
+
+        bt_encoder: bt_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "BT_ENCODER";
+            #sensor-binding-cells = <0>;
+            bindings = <&bt BT_NXT>, <&bt BT_PRV>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -111,7 +116,7 @@
 &kp ESCAPE    &kp Q  &kp W  &kp E      &kp R                 &kp T                            &kp UP                &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
 &kp TAB       &kp A  &kp S  &kp D      &kp F                 &kp G                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
 &kp LEFT_ALT  &kp Z  &kp X  &kp C      &kp V                 &kp B  &kp LEFT_GUI              &kp DOWN              &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                            &kp LCTRL  &shiftcaps_sticky_td  &sl 2                                                  &sl 1  &kp SPACE  &kp ENTER
+                            &sk LCTRL  &shiftcaps_sticky_td  &sl 2                                                  &sl 1  &kp SPACE  &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp LC(C_VOL_UP) C_VOL_DN>;
@@ -122,7 +127,7 @@
             bindings = <
 &trans     &kp LS(N1)    &kp LS(N2)  &kp LS(N3)  &kp LS(N4)      &kp LS(N5)                      &kp PG_UP               &kp LS(N6)  &kp LS(N7)       &kp LS(N8)  &kp LS(N9)  &kp LS(N0)     &kp BSPC
 &trans     &kp NUMBER_1  &kp N2      &kp N3      &kp N4          &kp N5                &kp HOME  &trans         &kp END  &kp N6      &kp N7           &kp N8      &kp N9      &kp N0         &trans
-&kp GRAVE  &kp TILDE     &kp PLUS    &kp LBKT    &kp LEFT_BRACE  &trans      &trans              &kp PAGE_DOWN           &trans      &kp RIGHT_BRACE  &kp RBKT    &kp PIPE    &kp BACKSLASH  &trans
+&kp GRAVE  &kp TILDE     &kp PLUS    &kp LBKT    &kp LEFT_BRACE  &trans      &trans              &kp PAGE_DOWN           &trans      &kp RIGHT_BRACE  &kp RBKT    &kp PERIOD  &kp BACKSLASH  &kp PIPE
                                      &kp MINUS   &kp UNDER       &kp EQUAL                                               &trans      &trans           &trans
             >;
         };
@@ -130,13 +135,13 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp F1  &kp F2           &kp F3           &kp F4           &kp F5           &kp F6                                     &mmv MOVE_UP                     &kp F7       &kp F8     &kp F9  &kp F10         &kp F11     &kp F12
-&trans  &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp K_COPY   &mkp RCLK  &trans  &bt BT_CLR      &bt BT_NXT  &trans
-&trans  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &trans                    &mmv MOVE_DOWN                   &kp K_PASTE  &mkp MB4   &trans  &bt BT_CLR_ALL  &bt BT_PRV  &trans
+&kp F1  &kp F2           &kp F3           &kp F4           &kp F5           &kp F6                                     &mmv MOVE_UP                     &kp F7       &kp F8     &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp K_COPY   &mkp RCLK  &trans  &trans   &trans   &trans
+&trans  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &trans                    &mmv MOVE_DOWN                   &kp K_PASTE  &mkp MB4   &trans  &trans   &trans   &trans
                                           &trans           &trans           &trans                                                                      &trans       &trans     &trans
             >;
 
-            sensor-bindings = <&rgb_encoder>;
+            sensor-bindings = <&bt_encoder>;
         };
     };
 };
