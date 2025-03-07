@@ -42,7 +42,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
   - '&shiftcaps_sticky_td'
   - {t: SYMBOL, h: '$$mdi:gesture-tap-hold$$'}
   - {t: NUMBER, h: '$$mdi:gesture-tap-hold$$'}
@@ -88,9 +88,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '}'
   - {t: ']', s: '}'}
-  - '|'
+  - .
   - {t: \, s: '|'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '|'
   - {t: '-', s: _}
   - _
   - {t: '=', s: +}
@@ -123,8 +123,8 @@ layers:
   - COPY
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:bluetooth-off$$
-  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB EFF
@@ -137,8 +137,8 @@ layers:
   - PASTE
   - '&mkp MB4'
   - {t: '$$mdi:transfer$$', type: trans}
-  - BT CLR ALL
-  - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
