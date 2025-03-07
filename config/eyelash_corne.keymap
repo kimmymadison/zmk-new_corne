@@ -130,15 +130,17 @@
 &kp GRAVE  &kp TILDE     &kp PLUS    &kp LBKT    &kp LEFT_BRACE  &trans      &trans              &kp PAGE_DOWN           &trans      &kp RIGHT_BRACE  &kp RBKT    &kp PERIOD  &kp BACKSLASH  &kp PIPE
                                      &kp MINUS   &kp UNDER       &kp EQUAL                                               &trans      &trans           &trans
             >;
+
+            sensor-bindings = <&scroll_encoder>;
         };
 
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp F1  &kp F2           &kp F3           &kp F4           &kp F5           &kp F6                                     &mmv MOVE_UP                     &kp F7       &kp F8     &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp K_COPY   &mkp RCLK  &trans  &trans   &trans   &trans
-&trans  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &trans                    &mmv MOVE_DOWN                   &kp K_PASTE  &mkp MB4   &trans  &trans   &trans   &trans
-                                          &trans           &trans           &trans                                                                      &trans       &trans     &trans
+&kp F1  &kp F2           &kp F3           &kp F4           &kp F5           &kp F6                                     &mmv MOVE_UP                     &kp F7          &kp F8     &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp C_AC_COPY   &mkp RCLK  &trans  &trans   &trans   &trans
+&trans  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &trans                    &mmv MOVE_DOWN                   &kp C_AC_PASTE  &mkp MB4   &trans  &trans   &trans   &trans
+                                          &trans           &trans           &trans                                                                      &bt BT_CLR_ALL  &trans     &trans
             >;
 
             sensor-bindings = <&bt_encoder>;
